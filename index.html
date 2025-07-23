@@ -3,24 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEDNICE Creative Studio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-1.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>Medbinice Creative Studio</title>
+
+    <link rel="stylesheet" href="css/combined.min.css">
+    <link rel="stylesheet" href="/fonts/PlayfairDisplay-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/fonts/InriaSerif-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,
-    400..700;1,400..700&family=Hanken+Grotesk:ital,
-    wght@0,100..900;1,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,
-    300;1,400;1,700&family=Oswald:wght@200..700&family=Playfair+Display:ital,
-    wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,
-    300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+
+     <!-- ========== OPEN GRAPH (FACEBOOK/LINKEDIN) ========== -->
+    <meta property="og:title" content="Medbinice | Creative Studio">
+    <meta property="og:description" content="Medbinice Creative Studio">
+    <meta property="og:image" content="https://medbinice.netlify.app//thumbnail.jpg">
+    <meta property="og:url" content="https://medbinice.netlify.app/">
+    <meta property="og:type" content="website">
+    
+    <style>
+        /* Add to your CSS */
+        .reveal-type .char {
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Ensure parent elements have proper layout */
+        .reveal-type {
+            display: block;
+            overflow: hidden;
+        }
+
+        /* Lazy loading styles */
+        .lazy {
+            opacity: 0;
+            transition: .4s cubic-bezier(.175, .885, .32, 1.275);    
+        }
+        
+        .lazy.loaded {
+            opacity: 1;
+        }
+        
+        .lazy-placeholder {
+            position: relative;
+            background-size: 200% 100%;
+            animation: 1.5s shine linear infinite;
+            border-radius: 4px;
+            transition: .4s cubic-bezier(.175, .885, .32, 1.275);
+        }
+        
+        @keyframes shine {
+            to {
+                background-position-x: -200%;
+            }
+        }
+        
+        /* Add blur effect for smoother loading */
+        .lazy-blur {
+            filter: blur(10px);
+            transition: filter 0.5s ease;
+        }
+        
+        .lazy-blur.loaded {
+            filter: blur(0);
+        }
+        
+        /* Loading spinner */
+        .lazy-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(0,0,0,0.1);
+            border-radius: 50%;
+            border-top: 3px solid #333;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+
+        .lazy-container {
+            transition: .4s cubic-bezier(.175, .885, .32, 1.275);
+        }
+
+        .lazy-container.loading .lazy-spinner {
+            display: block;
+        }
+        
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
     <label class="hamburger">
@@ -57,10 +131,10 @@
 
             <div class="nav-links-container">
                 <ul class="nav-list">
-                    <li><a onclick="location.href=`./index.html`">Home</a></li>
-                    <li><a onclick="location.href=`./gallery.html`">Gallery</a></li>
-                    <li><a onclick="location.href=`./#about`">About Us</a></li>
-                    <li><a onclick="location.href=`./#contact`">Contact Us</a></li>
+                    <li><a onclick="location.href=`https://medbinice.netlify.app/index.html`">Home</a></li>
+                    <li><a onclick="location.href=`https://medbinice.netlify.app/gallery.html`">Gallery</a></li>
+                    <li><a onclick="location.href=`https://medbinice.netlify.app/#about`">About Us</a></li>
+                    <li><a onclick="location.href=`https://medbinice.netlify.app/#contact`">Contact Us</a></li>
                 </ul>
             </div>
     </nav>
@@ -74,8 +148,8 @@
          <div class="main-video-container" data-aos="zoom-in" data-aos-duration="1200">
             <div class="video_container">
                 <video class="masked-video" autoplay loop muted playsinline>
-                    <source src="./videos/optimized-slower.mp4" type="video/mp4" loading="lazy">
-                    <source src="./videos/optimized-slower.webm" type="video/webm" loading="lazy">
+                    <source src="./videos/output-slower-2.mp4" type="video/mp4" loading="lazy">
+                    <source src="./videos/output-slowerr-1.webm" type="video/webm" loading="lazy">
                 </video>
 
                 <!-- Your Geometric SVG Mask -->
@@ -90,8 +164,8 @@
 
             <div class="video_container-1">
                     <video class="masked-video-1" autoplay loop muted playsinline>
-                        <source src="./videos/optimized-faster.mp4" type="video/mp4" loading="lazy">
-                        <source src="./videos/optimized-faster.webm" type="video/webm" loading="lazy">
+                        <source src="./videos/output-faster-1.mp4" type="video/mp4" loading="lazy">
+                        <source src="./videos/output-faster-1.webm" type="video/webm" loading="lazy">
                     </video>
 
                     <!-- Your Geometric SVG Mask -->
@@ -106,8 +180,8 @@
 
             <div class="video_container-2">
                 <video class="masked-video-2" autoplay loop muted playsinline>
-                    <source src="./videos/optimized-slower.mp4" type="video/mp4" loading="lazy">
-                    <source src="./videos/optimized-slower.webm" type="video/webm" loading="lazy">
+                    <source src="./videos/output-slower-2.mp4" type="video/mp4" loading="lazy">
+                    <source src="./videos/output-slowerr-1.webm" type="video/webm" loading="lazy">
                 </video>
 
                 <!-- Your Geometric SVG Mask -->
@@ -130,10 +204,23 @@
 
     <section id="about">
         <div class="container-1">
-            <div class="scrolling-text" data-aos="fade-up-left" data-aos-duration="1100">ALEX MONROE • ALEX MONROE • </div>
+            <div class="scrolling-text"  data-aos-duration="1100">ALEX MONROE • ALEX MONROE • </div>
 
             <div class="center-image">
-                <img src="./images-1/IMG_0295.PNG" alt="Center Image" class="fade-in"/>
+                <!-- Lazy loaded image with placeholder -->
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <div class="lazy-spinner"></div>
+                        <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800' viewBox='0 0 600 800'%3E%3Crect width='600' height='800' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/IMG_0295.avif"  
+                        alt="Center Image" 
+                        class="fade-in lazy lazy-blur"
+                        loading="lazy"
+                        width="600"
+                        height="800"
+                        type="avif"
+                        />             
+                </div>
             </div>
 
             <div class="card-container fade-in">
@@ -294,7 +381,7 @@
     </div>
 
     <section id="explore-gallery">
-        <div class="work-preview-text fade-in">
+        <div class="work-preview-text fade-in" style="background:url(gradient-images/IMG_0317.JPG) center center/cover no-repeat;">
             <div class="section-text">
                 <h1 data-aos="flip-up" data-aos-duration="1100">My Lens, Your World. A Glimpse Inside.</h1>
                 <p data-aos="flip-up" data-aos-duration="1200">Short on time? Here’s a handpicked selection of my most striking photographic work — where composition meets emotion.</p>
@@ -305,7 +392,7 @@
             </div>
             
             <div class="button-container" data-aos="zoom-in" data-aos-duration="1000">               
-                <a class="fancy" onclick="location.href=`./gallery.html`">
+                <a class="fancy" onclick="location.href=`https://medbinice.netlify.app/gallery.html`">
                 <span class="top-key"></span>
                 <span class="text">Explore Gallery</span>
                 <span class="bottom-key-1"></span>
@@ -315,17 +402,138 @@
 
         </div>
 
-        <div class="img-container" data-aos="fade-up" data-aos-duration="1800">
-            <span style="--i:1"><img src="./images-1/IMG_0302.JPG"></span>
-            <span style="--i:2"><img src="./images-1/IMG_0303.JPG"></span>
-            <span style="--i:3"><img src="./images-1/IMG_0304.JPG"></span>
-            <span style="--i:4"><img src="./images-1/IMG_0305.JPG"></span>
-            <span style="--i:5"><img src="./images-1/IMG_0306.JPG"></span>
-            <span style="--i:6"><img src="./images-1/IMG_0308.JPG"></span>
-            <span style="--i:7"><img src="./images-1/IMG_0309.JPG"></span>
-            <span style="--i:8"><img src="./images-1/IMG_0310.JPG"></span>
-            <span style="--i:9"><img src="./images-1/IMG_0311.JPG"></span>
-            <span style="--i:10"><img src="./images-1/The Spring Beauty Must-Haves You Need NOW.jpg"></span>
+        <div class="img-container">
+            <!-- Lazy loaded gallery images -->
+            <span style="--i:1">
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/1b43cd634a1d3ca68e1848f52953f03d.jpg" 
+                        alt="Gallery image 1"
+                        class="lazy lazy-blur"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    />
+                </div>
+            </span>
+            <span style="--i:2">
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/5f8075157024cbcc0076883fc7ce6df6.jpg" 
+                        alt="Gallery image 2"
+                        class="lazy lazy-blur"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    />
+                </div>
+            </span>
+            <span style="--i:3">
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/51dd3de2ab5cb684a9686c6f9af91fe1.jpg" 
+                        alt="Gallery image 3"
+                        class="lazy lazy-blur"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    />
+                </div>
+            </span>
+            <span style="--i:4">
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/76b727fc8bbcc84768669a170a5c6630.jpg" 
+                        alt="Gallery image 4"
+                        class="lazy lazy-blur"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    />
+                </div>
+            </span>
+            <span style="--i:5">
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/0251bd1316022f68ee2c3ee0ddab1271.jpg" 
+                        alt="Gallery image 5"
+                        class="lazy lazy-blur"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    />
+                </div>
+            </span>
+            <span style="--i:6">
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/4097a5bb2497e976d9ad508b3c897b08.jpg" 
+                        alt="Gallery image 6"
+                        class="lazy lazy-blur"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    />
+                </div>
+            </span>
+            <span style="--i:7">
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/8533aa1c1c07fdded567f59b96525738.jpg" 
+                        alt="Gallery image 7"
+                        class="lazy lazy-blur"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    />
+                </div>
+            </span>
+            <span style="--i:8">
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/a20a23eb7536cadbfaf566c577350c09.jpg" 
+                        alt="Gallery image 8"
+                        class="lazy lazy-blur"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    />
+                </div>
+            </span>
+            <span style="--i:9">
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/c58fe2c3f59044da63ace3a1e75e7646.jpg" 
+                        alt="Gallery image 9"
+                        class="lazy lazy-blur"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    />
+                </div>
+            </span>
+            <span style="--i:10">
+                <div class="lazy-container lazy-placeholder" style="width:100%; height:100%">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                        data-src="./images-1/d64f63fbb1d665a60f7648351c0538ab.jpg" 
+                        alt="Gallery image 10"
+                        class="lazy lazy-blur"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    />
+                </div>
+            </span>
         </div>
     </section>
 
@@ -339,7 +547,7 @@
         <!-- Section header -->
         <div class="section-header">
             <h1 class="fade-in"><span>Behind The Lens</span></h1>
-            <p>Discover my creative process from concept to final image</p>
+            <p style="color: #514f4f;">Discover my creative process from concept to final image</p>
         </div>
         
         <!-- Video showcase -->
@@ -348,8 +556,8 @@
             <div class="video-card fade-in">
                 <div class="video-container ">
                     <video autoplay loop muted playsinline>
-                        <source src="./vdeos/optimized-makeup.mp4" type="video/mp4" loading="lazy">
-                        <source src="./videos/optimized-makeup.webm" type="video/webm" loading="lazy">
+                        <source src="./videos/output-makeup-720p.mp4" type="video/mp4" loading="lazy">
+                        <source src="./videos/output-makeup-720p.webm" type="video/webm" loading="lazy">
                     </video>
 
                     <div class="video-overlay">
@@ -363,8 +571,8 @@
             <div class="video-card fade-in">
                 <div class="video-container">
                     <video autoplay loop muted playsinline>
-                        <source src="./videos/optimized-photoshoot.mp4" type="video/mp4" loading="lazy">
-                        <source src="./videos/optimized-photoshoot.webm" type="video/webm" loading="lazy">
+                        <source src="./videos/output-photoshoot-720p.mp4" type="video/mp4" loading="lazy">
+                        <source src="./videos/output-photoshoot-720p.webm" type="video/webm" loading="lazy">
                     </video>
 
                     <div class="video-overlay">
@@ -378,8 +586,8 @@
             <div class="video-card fade-in">
                 <div class="video-container">
                     <video autoplay loop muted playsinline>
-                        <source src="./videos/optimized-editing.mp4" type="video/mp4" loading="lazy">
-                        <source src="./videos/optimized-editing.webm" type="video/webm" loading="lazy">
+                        <source src="./videos/output-editing-720p.mp4" type="video/mp4" loading="lazy">
+                        <source src="./videos/output-editing-720p.webm" type="video/webm" loading="lazy">
                     </video>
 
                     <div class="video-overlay">
@@ -489,7 +697,18 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0445.JPG" alt="profile-pics" class="profile-pics">
+                                            <!-- Lazy loaded profile images -->
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0445_1.JPG" 
+                                                    alt="Adesuwa Okafor"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">He took photos of our newborn and managed to capture every little yawn, stretch, and smile with such gentle care. We’ll treasure these first-moment memories for the rest of our lives.</p>
@@ -503,7 +722,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0441.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0441_1.JPG" 
+                                                    alt="Tunde Bamidele"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">I’ve worked with many photographers over the years, but none have matched his professionalism, creativity, and ability to make people feel comfortable. The final images always exceed expectations.</p>
@@ -517,7 +746,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0455.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0455.JPG" 
+                                                    alt="Chinyere Nwosu"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">We had a last-minute photoshoot request for a corporate event, and he delivered the final edited photos within 24 hours—without sacrificing a single ounce of quality. Incredible turnaround and precision.</p>
@@ -531,7 +770,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0442.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0442_1.JPG" 
+                                                    alt="Aminu Bello"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">The senior portraits he did for my son were outstanding. He brought out his personality so naturally, and now we have a collection of images that genuinely reflect who he is.</p>
@@ -545,7 +794,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/WhatsApp Image 2025-06-11 at 07.05.17_6d99bd0b.jpg" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/WhatsApp Image 2025-06-11 at 07.05.17_6d99bd0b (1).jpg" 
+                                                    alt="Kemi Alabi"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">From the very first consultation to the final photo delivery, everything was seamless. He was attentive, passionate, and always went the extra mile to make sure we were thrilled with the results.</p>
@@ -559,7 +818,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0448.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0448_1.JPG" 
+                                                    alt="Ebuka Eze"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">We hired this photographer for our engagement shoot, and I honestly couldn’t believe how beautifully the photos turned out. He captured every emotion—laughter, nervousness, love—in a way that felt truly magical.</p>
@@ -573,7 +842,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0446.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0446.JPG" 
+                                                    alt="Ngozi Umeh"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">I needed professional headshots for my portfolio, and not only did he deliver exceptional quality photos, but he also made me feel so at ease during the session. It felt more like fun than work.</p>
@@ -587,7 +866,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0447.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0447_1.JPG" 
+                                                    alt="Aisha Abdullahi"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">Our wedding day was chaotic, emotional, and fast-paced—but this photographer managed to freeze every perfect moment in time. The photos are cinematic, raw, and so full of love. We’re endlessly grateful.</p>
@@ -601,7 +890,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0451.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0451_1.JPG" 
+                                                    alt="Bolanle Adegoke"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">As a small business owner, branding is everything. He came in with ideas, lighting setups, and a keen eye for detail. The product and team photos have elevated our website tenfold.</p>
@@ -615,7 +914,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0450.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0450.JPG" 
+                                                    alt="Gift Suleiman"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">I’m not usually comfortable in front of a camera, but during our maternity shoot, he created such a warm and easygoing environment. The photos are intimate, joyful, and truly timeless.</p>
@@ -629,7 +938,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0452.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0452_1.JPG" 
+                                                    alt="Ogechi Duru"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">We surprised our parents with a family photo session, and the results brought everyone to tears. He has a way of capturing real moments that feel completely unposed yet perfectly framed.</p>
@@ -643,7 +962,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0459.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0459.JPG" 
+                                                    alt="Dayo Ogunleye"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">The graduation photos he took of my daughter left us speechless. Every image had such depth and clarity. He even stayed longer than planned just to get the perfect golden-hour shots.</p>
@@ -657,7 +986,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0457.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0457.JPG" 
+                                                    alt="Chuka Nwachukwu"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">I hired him for an editorial-style shoot and was amazed by how well he translated our creative vision into reality. He’s not just a photographer—he’s an artist with incredible storytelling skills.</p>
@@ -671,7 +1010,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/IMG_0453.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/IMG_0453_1.JPG" 
+                                                    alt="Hadiza Lawal"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">He photographed our music gig, and the photos somehow captured the energy of the crowd, the atmosphere, and every intense moment on stage. It was like reliving the night all over again.</p>
@@ -685,7 +1034,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="profile-pics/IMG_0454.JPG" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="profile-pics/IMG_0454.jpg" 
+                                                    alt="Rose Igwe"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">We booked a travel session during our anniversary trip, and he scouted the most stunning hidden spots. Each photo looks like a magazine cover—natural, vibrant, and full of emotion.</p>
@@ -699,7 +1058,17 @@
                                 <li class="swiper-slide">
                                     <div class="wrapper">
                                         <div class="thumbnails">
-                                            <img src="./profile-pics/WhatsApp Image 2025-06-11 at 07.05.17_b5ca28b6.jpg" alt="profile-pics" class="profile-pics">
+                                            <div class="lazy-container lazy-placeholder" style="width:150px; height:150px; border-radius:50%;">
+                                                <img 
+                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                                                    data-src="./profile-pics/WhatsApp Image 2025-06-11 at 07.05.17_b5ca28b6.jpg" 
+                                                    alt="Onyeike Blessing"
+                                                    class="profile-pics lazy lazy-blur"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="150"
+                                                />
+                                            </div>
                                         </div>
                                         <div class="aside">
                                             <p class="statement">We wanted to document our grandparents’ 50th wedding anniversary, and he captured the legacy, warmth, and decades of love in a way that no one else could have. Absolutely unforgettable work.</p>
@@ -726,26 +1095,47 @@
         <div class="contact-section">
             <div class="container-2">
                 <div class="contact-form fade-in">
-                    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">Get In Touch</h2>
-                    <form action="https://formsubmit.co/shilohegbuji874@gmail.com" method="POST">
+                    <form id="contact-Form" action="https://formsubmit.co/shilohegbuji874@gmail.com" method="POST">
+                        <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">Get In Touch</h2>
+
+                        <!-- Add your form fields here -->
                         <div class="form-group">
-                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" name="name" placeholder="John Doe" required>
+                            <i class="fas fa-user input-icon"></i>
                         </div>
+                        
                         <div class="form-group">
-                            <input type="email" class="form-control"name="email"  placeholder="Your Email" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" name="email" placeholder="john@example.com" required>
+                            <i class="fas fa-envelope input-icon"></i>
                         </div>
+                        
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject" name="_subject">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" name="_subject" placeholder="How can we help?" required>
+                            <i class="fas fa-tag input-icon"></i>
                         </div>
+                        
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" name="message" placeholder="Type your message here..." required></textarea>
+                            <i class="fas fa-comment input-icon" style="top: 40px;"></i>
                         </div>
-                        <button type="submit" class="btn" data-aos="flip-up" data-aos-duration="1000">Send Message</button>
+                        
+                        <!-- FormSubmit Settings -->
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://medbinice.netlify.app/thanks.html">
+                        <input type="hidden" name="_autoresponse" value="Thank you for your message! We'll get back to you soon.">
+                        
+                        <button type="submit" class="btn" data-aos="flip-in" data-aos-duration="1200">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <div id="formMessage" class="form-message"></div>
                     </form>
                 </div>
                 
                 <div class="contact-info fade-in">
-                    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">Contact Info</h2>
+                    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1100">Contact Info</h2>
                     
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -780,8 +1170,8 @@
                         </div>
                     </div>
                     
-                    <div class="social-links" data-aos="flip-in" data-aos-duration="1000">
-                        <h3 class="social-title">Connect With Us</h3>
+                    <div class="social-links">
+                        <h3 class="social-title" data-aos="flip-in" data-aos-duration="1000">Connect With Us</h3>
                         <div class="social-icons">
                             <ul class="wrapper-1">
                                 <li class="icon-1 facebook">
@@ -833,10 +1223,10 @@
             </div>
             
             <div class="container-3 fade-in">
-                <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">Locate Me</h2>
+                <h2 class="section-title-1" data-aos="zoom-in" data-aos-duration="1000">Locate Me</h2>
                 <div class="map-container">
                     <!-- Embedded Google Map -->
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.5062196542967!2d7.486416573821993!3d5.5212899889767435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1042dcd3f5a634c1%3A0xe5e077bbaaab274f!2sOkpara%20Ave%2C%20Umuahia%20440236%2C%20Abia!5e1!3m2!1sen!2sng!4v1749622217378!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.5062196542967!2d7.486416573821993!3d5.521259088976743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1042dcd3f5a634c1%3A0xe5e077bbaaab274f!2sOkpara%20Ave%2C%20Umuahia%20440236%2C%20Abia!5e1!3m2!1sen!2sng!4v1749622217378!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -871,20 +1261,21 @@
         </div>
 
         <div class="footer-center">
-        <h1 class="brand fade-in">MEDBINICE<span class="copyright">©</span></h1>
+        <h1 class="brand fade-in"><a href="https://medbinice.netlify.app/"></a>MEDBINICE<span class="copyright">©</span></h1>
         </div>
     </footer>
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="lazyloading.js"></script>
+<script src="js/libs/aos.js"></script>
 <script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/split-type"></script>
-<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+<script src="script-email.js"></script>
+<script src="js/libs/gsap.min.js"></script>
+<script src="js/libs/scrolltrigger.min.js"></script>
+<script src="js/libs/lenis.min.js"></script>
+<script src="js/libs/swiper-bundle.min.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    once: true
+  });
 </script>
 <script>
   document.getElementById('back-to-top-1').addEventListener('click', () => {
@@ -907,7 +1298,7 @@
     }
 
     requestAnimationFrame(scrollStep);
-  });
+  });
 </script>
 <script>
     const swiper = new Swiper('.swiper', {
@@ -927,41 +1318,140 @@
 
     });
 </script>
-<script>
+
+<script type="module">
+    import SplitType from './js/libs/split-type.min.js';
+    
     document.addEventListener('DOMContentLoaded', () => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    const splitTypes = document.querySelectorAll('.reveal-type')
-
-    splitTypes.forEach((char, i) => {
-        const text = new SplitType(char, { types: 'chars' })
+        gsap.registerPlugin(ScrollTrigger);
         
-        gsap.from(text.chars, {
-            scrollTrigger: {
-                trigger: char,
-                start: 'top 80%',
-                end: 'top 20%',
-                scrub: true,
-                markers: false
-            },
-            opacity: 0.2,
-            stagger: 0.2
+        const splitTypes = document.querySelectorAll('.reveal-type');
+        
+        splitTypes.forEach((char) => {
+            const text = new SplitType(char, { types: 'chars' });
+            
+            gsap.from(text.chars, {
+                scrollTrigger: {
+                    trigger: char,
+                    start: 'top 80%',
+                    end: 'top 20%',
+                    scrub: true,
+                    markers: false
+                },
+                opacity: 0.2,
+                stagger: 0.2
+            });
+        
+
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            console.log(e)
         })
-    })
 
-    const lenis = new Lenis()
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
 
-    lenis.on('scroll', (e) => {
-        console.log(e)
-    })
-
-    function raf(time) {
-        lenis.raf(time)
         requestAnimationFrame(raf)
-    }
+        })
 
-    requestAnimationFrame(raf)
-    })
+        .catch(error => console.error('Error loading SplitType:', error));
+    });
+</script>
+
+<script>
+    // Lazy loading implementation
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if browser supports native lazy loading
+        const supportsNativeLazy = 'loading' in HTMLImageElement.prototype;
+        
+        // Get all lazy images
+        const lazyImages = document.querySelectorAll('img.lazy');
+        
+        if (supportsNativeLazy) {
+            // Browser supports native lazy loading
+            lazyImages.forEach(img => {
+                // Replace data-src with src
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                }
+                // Remove data-src attribute
+                img.removeAttribute('data-src');
+            });
+        } else {
+            // Fallback for browsers without native lazy loading
+            const lazyLoad = function() {
+                lazyImages.forEach(img => {
+                    if (img.dataset.src && isInViewport(img)) {
+                        // Show loading spinner
+                        const container = img.closest('.lazy-container');
+                        if (container) {
+                            container.classList.add('loading');
+                        }
+                        
+                        // Create new image to preload
+                        const tempImg = new Image();
+                        tempImg.src = img.dataset.src;
+                        tempImg.onload = function() {
+                            // Set the actual image source
+                            img.src = img.dataset.src;
+                            
+                            // Remove data-src attribute
+                            img.removeAttribute('data-src');
+                            
+                            // Add loaded class for transition effect
+                            img.classList.add('loaded');
+                            
+                            // Remove loading spinner
+                            if (container) {
+                                container.classList.remove('loading');
+                            }
+                        };
+                    }
+                });
+            };
+            
+            // Check if element is in viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.bottom >= 0 && 
+                    rect.right >= 0 && 
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) && 
+                    rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+            
+            // Initial check
+            lazyLoad();
+            
+            // Listen to scroll and resize events
+            window.addEventListener('scroll', lazyLoad);
+            window.addEventListener('resize', lazyLoad);
+        }
+        
+        // For browsers that support native lazy loading, still add the loaded class
+        lazyImages.forEach(img => {
+            img.onload = function() {
+                this.classList.add('loaded');
+                const container = this.closest('.lazy-container');
+                if (container) {
+                    container.classList.remove('loading');
+                }
+            };
+            
+            // If image is already loaded (cached)
+            if (img.complete) {
+                img.classList.add('loaded');
+                const container = img.closest('.lazy-container');
+                if (container) {
+                    container.classList.remove('loading');
+                }
+            }
+        });
+    });
 </script>
 </body>
 </html>

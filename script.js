@@ -101,86 +101,50 @@ document.querySelectorAll('.btn').forEach(btn => {
     });
 });
 
-
-//CONTACT SECTION
-document.querySelector('form').addEventListener('submit', function(e) {
-    const nameInput = document.querySelector('input[type="text"]');
-    const emailInput = document.querySelector('input[type="email"]');
-    const messageInput = document.querySelector('textarea');
-    
-    if (!nameInput.value.trim()) {
-        alert('Please enter your name');
-        e.preventDefault();
-        return;
-    }
-    
-    if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
-        alert('Please enter a valid email address');
-        e.preventDefault();
-        return;
-    }
-    
-    if (!messageInput.value.trim()) {
-        alert('Please enter your message');
-        e.preventDefault();
-        return;
-    }
-    
-    // Form is valid - show success message
-    e.preventDefault();
-    alert('Form submitted successfully! (This is a demo)');
-    this.reset();
-});
-
-function isValidEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-}
-
 //TRUST SECTION
  // Project counter animation
-        function animateCounter(element, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const value = Math.floor(progress * (end - start) + start);
-                element.textContent = value.toLocaleString() + '+';
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
+function animateCounter(element, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.textContent = value.toLocaleString() + '+';
+        if (progress < 1) {
             window.requestAnimationFrame(step);
         }
+    };
+    window.requestAnimationFrame(step);
+}
 
-        // Fade-in animation on scroll
-        function setupFadeAnimations() {
-            const fadeElements = document.querySelectorAll('.fade-in');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('appear');
-                        
-                        // Start counter animation when the project counter comes into view
-                        if (entry.target.id === 'project-counter') {
-                            animateCounter(entry.target, 0, 850, 2000);
-                        }
-                        
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-
-            fadeElements.forEach(element => {
-                observer.observe(element);
-            });
-        }
-
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            setupFadeAnimations();
+// Fade-in animation on scroll
+function setupFadeAnimations() {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                
+                // Start counter animation when the project counter comes into view
+                if (entry.target.id === 'project-counter') {
+                    animateCounter(entry.target, 0, 850, 2000);
+                }
+                
+                observer.unobserve(entry.target);
+            }
         });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    setupFadeAnimations();
+});

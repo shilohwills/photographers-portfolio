@@ -12,11 +12,26 @@ function loadGallery(category) {
   for (let i = 1; i <= 40; i++) {
     const imgWrapper = document.createElement('div');
     imgWrapper.classList.add('gallery-image');
+    
+    // Add AOS attributes here
+    imgWrapper.setAttribute('data-aos', 'zoom-in-up');
+    imgWrapper.setAttribute('data-aos-duration', '600');
+    imgWrapper.setAttribute('data-aos-offset', '100');
+    imgWrapper.setAttribute('data-aos-easing', 'ease-in-out');
+    // Add delay for staggered animations
+    imgWrapper.setAttribute('data-aos-delay', `${(i % 6) * 100}`);
+
     const img = document.createElement('img');
-    img.src = `images/${category}/${i}.jpg`;
-    img.alt = `${category} ${i}`;
+    img.src = `images/${category}/${i}.webp`;
+    img.alt = `${category} ${i}`;``
+    img.loading = 'lazy'; // Add lazy loading
     imgWrapper.appendChild(img);
     galleryColumns[i % 4].appendChild(imgWrapper);
+  }
+
+  // Refresh AOS to detect new elements
+  if (window.AOS) {
+    AOS.refresh();
   }
 }
 
