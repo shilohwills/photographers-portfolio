@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEDNICE Creative Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,
+    400..700;1,400..700&family=Hanken+Grotesk:ital,
+    wght@0,100..900;1,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,
+    300;1,400;1,700&family=Oswald:wght@200..700&family=Playfair+Display:ital,
+    wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,
+    300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+</head>
+<body>
+    <label class="hamburger">
+      <input type="checkbox" />
+        <svg viewBox="0 0 32 32" aria-label="Mobile menu toggle">
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5
+           10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2
+           18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+  </label>
+
+    <!-- Navigation Menu -->
+    <nav class="mobile-nav">
+        <div class="logo">
+            <p>MEDBINICE</p>
+        </div>
+
+        <div class="mobile-container">
+            <div class="contact-social-container">
+                <div class="nav-contact">
+                    <div class="no-email">
+                        <p class="contact-number"  style="width: 5.8rem">514-903-4455</p>
+                        <a href="mailto:shilohegbuji874@gmail.com" class="contact-email" style="width: 4rem;">Email Us</a>
+                    </div>
+                </div>
+            
+                <div class="social-links-2">
+                    <a href="">LinkedIn</a>
+                    <a href="">Instagram</a>
+                    <a href="">Facebook</a>
+                </div>
+            </div>
+
+            <div class="nav-links-container">
+                <ul class="nav-list">
+                    <li><a onclick="location.href=`./index.html`">Home</a></li>
+                    <li><a onclick="location.href=`./gallery.html`">Gallery</a></li>
+                    <li><a onclick="location.href=`./#about`">About Us</a></li>
+                    <li><a onclick="location.href=`./#contact`">Contact Us</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <section class="hero-container" id="hero">
+         <div class="hero-logo" data-aos="zoom-in" data-aos-duration="1000">
+            <h1>MEDBINICE</h1>
+            <h2>STUDIO CRÈATIF</h2> 
+         </div>
+
+         <div class="main-video-container" data-aos="zoom-in" data-aos-duration="1200">
+            <div class="video_container">
+                <video class="masked-video" autoplay loop muted playsinline>
+                    <source src="./videos/optimized-slower.mp4" type="video/mp4" loading="lazy">
+                    <source src="./videos/optimized-slower.webm" type="video/webm" loading="lazy">
+                </video>
+
+                <!-- Your Geometric SVG Mask -->
+                <svg width="440" height="450" viewBox="0 0 440 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="video-mask">
+                        <path opacity="1" d="M105.973 0.00585938L124.859 449.998L0 449.99L0.0263672 0L105.973 0.00585938Z" fill="#ffffff"/>
+                        <path opacity="1" d="M484 284.479L463.883 450H317.186L315.715 412.593L309 0H447.351L484 284.479Z" fill="#ffffff"/>
+                        <path opacity="1" d="M268.2 0.874023L268 0.893555L293 443.432V450H158V0H268.085L268.2 0.874023Z" fill="#ffffff"/>
+                    </mask>
+                </svg>
+            </div>
+
+            <div class="video_container-1">
+                    <video class="masked-video-1" autoplay loop muted playsinline>
+                        <source src="./videos/optimized-faster.mp4" type="video/mp4" loading="lazy">
+                        <source src="./videos/optimized-faster.webm" type="video/webm" loading="lazy">
+                    </video>
+
+                    <!-- Your Geometric SVG Mask -->
+                    <svg width="440" height="450" viewBox="0 0 440 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="video-mask-1">
+                            <path opacity="1" d="M159 450H14.3135L26.4004 448.816L2.1875 0L0 0.213867V0H159V450Z" fill="#ffffff"/>
+                            <path opacity="1" d="M326.452 450H193V0H302.103L326.452 450Z" fill="#ffffff"/>
+                            <path opacity="1" d="M497 450H363.669L331.36 0L331 0.0439453V0H497V450Z" fill="#ffffff"/>
+                        </mask>
+                    </svg>
+            </div>
+
+            <div class="video_container-2">
+                <video class="masked-video-2" autoplay loop muted playsinline>
+                    <source src="./videos/optimized-slower.mp4" type="video/mp4" loading="lazy">
+                    <source src="./videos/optimized-slower.webm" type="video/webm" loading="lazy">
+                </video>
+
+                <!-- Your Geometric SVG Mask -->
+            <svg width="440" height="450" viewBox="0 0 440 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="video-mask-2">
+                        <path opacity="1" d="M232.248 450H131V0H271.933L232.248 450Z" fill="#ffffff"/>
+                        <path opacity="1" d="M81.3125 44.585L113.534 449.645L114 449.544V450H0V0H77.3984L81.3125 44.585Z" fill="#ffffff"/>
+                        <path opacity="1" d="M439.489 450H272L299.057 0H439.489V450Z" fill="#ffffff"/>
+                    </mask>
+                </svg>
+            </div>
+    </div>
+
+        <div class= "hero-extra">
+                <p class="hero-extra-text" data-aos="fade-left" data-aos-duration="1300">YOUR <span class="hero-extra-span">reality</span></p>
+                <p class="hero-extra-text-1" data-aos="fade-left" data-aos-duration="1400">SHAPES</p>
+                <p class="hero-extra-text-2" data-aos="fade-left" data-aos-duration="1500">OUR <span class="hero-extra-span">creativity</span></p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container-1">
+            <div class="scrolling-text" data-aos="fade-up-left" data-aos-duration="1100">ALEX MONROE • ALEX MONROE • </div>
+
+            <div class="center-image">
+                <img src="./images-1/IMG_0295.PNG" alt="Center Image" class="fade-in"/>
+            </div>
+
+            <div class="card-container fade-in">
+                <div class="circle"></div>
+                <div class="circle circle-2"></div>
+                
+                <div class="text-decoration decoration-1">ALEX</div>
+                <div class="text-decoration decoration-2">MONROE</div>
+                
+                <div class="header">
+                    <div class="greeting" data-aos="flip-up" data-aos-duration="1100">Hello, I'm</div>
+                    <h1 class="name" data-aos="flip-up" data-aos-duration="1200">ALEX <span>MONROE</span></h1>
+                    <div class="title" data-aos="flip-up" data-aos-duration="1300">PHOTOGRAPHER AT BEDNICE</div>
+                </div>
+                
+                <div class="bio">
+                    <p>Through my lens, I freeze time and capture the raw, fleeting emotions that often go unnoticed.</p>
+                    <p>My passion lies in using natural light to reveal the true essence of a moment — <span class="-1">unposed, unscripted, and undeniably real</span>.</p>
+                </div>
+                
+                <div class="signature" data-aos="fade-left" data-aos-duration="1500">Alex Monroe</div>
+                
+                <div class="social-links-1">
+                    <ul class="wrapper-1">
+                        <li class="icon facebook">
+                            <span class="tooltip">Facebook</span>
+                            <svg
+                            viewBox="0 0 320 512"
+                            height="1.2em"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                            >
+                            <path
+                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                            ></path>
+                            </svg>
+                        </li>
+                        <li class="icon twitter">
+                            <span class="tooltip">Twitter</span>
+                            <svg
+                            height="1.8em"
+                            fill="currentColor"
+                            viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="twitter"
+                            >
+                            <path
+                                d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+                            ></path>
+                            </svg>
+                        </li>
+                        <li class="icon instagram">
+                            <span class="tooltip">Instagram</span>
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1.2em"
+                            fill="currentColor"
+                            class="bi bi-instagram"
+                            viewBox="0 0 16 16"
+                            >
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                            ></path>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+  </section>
+
+  <div class="container-6">
+        <section class="trust-section">
+            <div class="section-header fade-in">
+                <h2 class="fade-in">My Visual Journey</h2>
+                <p class="reveal-type">For over a decade, I've captured life's most precious moments through my lens, creating timeless imagery that speaks to the soul.</p>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="story-content fade-in">
+                    <h3 class="fade-in">Capturing Life's Essence</h3>
+                    <p class="reveal-type">My journey in photography began in 2010 when I first picked up a camera during my travels through Southeast Asia. What started as a passion project quickly evolved into a lifelong pursuit of visual storytelling.</p>
+                    
+                    <p class="reveal-type">Over the years, I've developed a distinctive style that blends technical precision with emotional depth. My approach focuses on authentic moments, genuine connections, and the subtle interplay of light and shadow that transforms ordinary scenes into extraordinary art.</p>
+                    
+                    <div class="highlight-1 fade-in">
+                        <p class="reveal-type">"Photography is more than just taking pictures—it's about preserving fleeting moments, revealing hidden beauty, and telling stories that transcend words."</p>
+                    </div>
+                    
+                    <p class="reveal-type">My work has been featured in international publications, exhibited in galleries across Europe and North America, and has helped countless clients preserve their most cherished memories. I continuously refine my craft through workshops and collaborations with other artists.</p>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-card fade-in">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div class="stat-number">12+</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                    
+                    <div class="stat-card fade-in">
+                        <i class="fas fa-camera"></i>
+                        <div class="stat-number" id="project-counter">200</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    
+                    <div class="stat-card fade-in">
+                        <i class="fas fa-globe"></i>
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Countries Explored</div>
+                    </div>
+                    
+                    <div class="stat-card fade-in">
+                        <i class="fas fa-heart"></i>
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trust-reasons fade-in">
+                <h3 class="fade-in">Why Clients Trust My Vision</h3>
+                <div class="reasons-grid">
+                    <div class="reason">
+                        <i class="fas fa-medal"></i>
+                        <div class="reason-content">
+                            <h4 class="fade-in">Award-Winning Quality</h4>
+                            <p class="reveal-type">Recipient of 15+ international photography awards for technical excellence and artistic vision.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reason">
+                        <i class="fas fa-handshake"></i>
+                        <div class="reason-content">
+                            <h4 class="fade-in">Client-First Approach</h4>
+                            <p class="reveal-type">Personalized service with dedicated support from concept to final delivery.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reason">
+                        <i class="fas fa-lightbulb"></i>
+                        <div class="reason-content">
+                            <h4 class="fade-in">Creative Innovation</h4>
+                            <p class="reveal-type">Constantly evolving techniques to deliver fresh perspectives and unique imagery.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reason">
+                        <i class="fas fa-clock"></i>
+                        <div class="reason-content">
+                            <h4 class="fade-in">Timeless Results</h4>
+                            <p class="reveal-type">Images that capture the essence of the moment while maintaining contemporary relevance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="explore-gallery">
+        <div class="work-preview-text fade-in">
+            <div class="section-text">
+                <h1 data-aos="flip-up" data-aos-duration="1100">My Lens, Your World. A Glimpse Inside.</h1>
+                <p data-aos="flip-up" data-aos-duration="1200">Short on time? Here’s a handpicked selection of my most striking photographic work — where composition meets emotion.</p>
+                <p data-aos="flip-up" data-aos-duration="1300">From raw textures to clean editorial styles, these pieces capture the energy I bring to every frame.</p> 
+                <P data-aos="flip-up" data-aos-duration="1400">Explore still visuals with real impact feel the story behind the shot. 
+                <P data-aos="flip-up" data-aos-duration="1500">Whether it’s for brand storytelling, portraiture, or creative campaigns, these images speak for themselves</P> 
+                <p data-aos="flip-up" data-aos-duration="1600">Dive in!</p>
+            </div>
+            
+            <div class="button-container" data-aos="zoom-in" data-aos-duration="1000">               
+                <a class="fancy" onclick="location.href=`./gallery.html`">
+                <span class="top-key"></span>
+                <span class="text">Explore Gallery</span>
+                <span class="bottom-key-1"></span>
+                <span class="bottom-key-2"></span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="img-container" data-aos="fade-up" data-aos-duration="1800">
+            <span style="--i:1"><img src="./images-1/IMG_0302.JPG"></span>
+            <span style="--i:2"><img src="./images-1/IMG_0303.JPG"></span>
+            <span style="--i:3"><img src="./images-1/IMG_0304.JPG"></span>
+            <span style="--i:4"><img src="./images-1/IMG_0305.JPG"></span>
+            <span style="--i:5"><img src="./images-1/IMG_0306.JPG"></span>
+            <span style="--i:6"><img src="./images-1/IMG_0308.JPG"></span>
+            <span style="--i:7"><img src="./images-1/IMG_0309.JPG"></span>
+            <span style="--i:8"><img src="./images-1/IMG_0310.JPG"></span>
+            <span style="--i:9"><img src="./images-1/IMG_0311.JPG"></span>
+            <span style="--i:10"><img src="./images-1/The Spring Beauty Must-Haves You Need NOW.jpg"></span>
+        </div>
+    </section>
+
+    <section id="creator-process">
+        <div class="photography-container">
+        <!-- Decorative elements -->
+        <div class="decorative-frame frame-top-left"></div>
+        <div class="decorative-frame frame-bottom-right"></div>
+        <div class="grain-overlay"></div>
+        
+        <!-- Section header -->
+        <div class="section-header">
+            <h1 class="fade-in"><span>Behind The Lens</span></h1>
+            <p>Discover my creative process from concept to final image</p>
+        </div>
+        
+        <!-- Video showcase -->
+        <div class="video-showcase">
+            <!-- Video 1: Concept -->
+            <div class="video-card fade-in">
+                <div class="video-container ">
+                    <video autoplay loop muted playsinline>
+                        <source src="./vdeos/optimized-makeup.mp4" type="video/mp4" loading="lazy">
+                        <source src="./videos/optimized-makeup.webm" type="video/webm" loading="lazy">
+                    </video>
+
+                    <div class="video-overlay">
+                        <h1 data-aos="flip-up" data-aos-duration="1000">THE CANVAS</h1>
+                        <p data-aos="flip-up" data-aos-duration="1100">Precision & Vision</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 2: Shooting -->
+            <div class="video-card fade-in">
+                <div class="video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="./videos/optimized-photoshoot.mp4" type="video/mp4" loading="lazy">
+                        <source src="./videos/optimized-photoshoot.webm" type="video/webm" loading="lazy">
+                    </video>
+
+                    <div class="video-overlay">
+                        <h1 data-aos="flip-up" data-aos-duration="1000">IN ACTION</h1>
+                        <p data-aos="flip-up" data-aos-duration="1100">Where vision Meets Reality</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 3: Editing -->
+            <div class="video-card fade-in">
+                <div class="video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="./videos/optimized-editing.mp4" type="video/mp4" loading="lazy">
+                        <source src="./videos/optimized-editing.webm" type="video/webm" loading="lazy">
+                    </video>
+
+                    <div class="video-overlay">
+                        <h1 data-aos="flip-up" data-aos-duration="1000">THE FINAL TOUCH</h1>
+                        <p data-aos="flip-up" data-aos-duration="1100">Transferring Pixels Into Art</p>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <header>
+                <h1 class="fade-in">Photography Services</h1>
+                <p>Premium photography packages tailored to capture your special moments with artistic excellence</p>
+            </header>
+
+            <div class="pricing-container">
+                <!-- Portrait Package -->
+                <div class="pricing-card fade-in">
+                    <div class="card-header">
+                        <h3 class="fade-in">Essential Portrait</h3>
+                        <p>Perfect for individuals and small groups</p>
+                    </div>
+                    <div class="price" data-aos="zoom-in" data-aos-duration="1000">
+                        <span class="amount">$199</span>
+                        <span class="period">per session</span>
+                    </div>
+                    <div class="features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 1 hour photo session</li>
+                            <li><i class="fas fa-check"></i> 15 professionally edited photos</li>
+                            <li><i class="fas fa-check"></i> 1 location</li>
+                            <li><i class="fas fa-check"></i> Online gallery access</li>
+                            <li><i class="fas fa-check"></i> Print release</li>
+                        </ul>
+                    </div>
+                    <div class="action" data-aos="flip-up" data-aos-duration="1000">
+                        <a href="#" class="btn-1">Book Session</a>
+                    </div>
+                </div>
+
+                <!-- Popular Event Package -->
+                <div class="pricing-card card-highlighted fade-in">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="card-header">
+                        <h3 class="fade-in">Premium Event</h3>
+                        <p>Comprehensive coverage for your special occasions</p>
+                    </div>
+                    <div class="price" data-aos="zoom-in" data-aos-duration="1000">
+                        <span class="amount">$899</span>
+                        <span class="period">per event</span>
+                    </div>
+                    <div class="features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 6 hours of coverage</li>
+                            <li><i class="fas fa-check"></i> 2 professional photographers</li>
+                            <li><i class="fas fa-check"></i> 100+ edited photos</li>
+                            <li><i class="fas fa-check"></i> Online gallery with download</li>
+                            <li><i class="fas fa-check"></i> 10 fine art prints (8x10)</li>
+                            <li><i class="fas fa-check"></i> Fast 1-week delivery</li>
+                        </ul>
+                    </div>
+                    <div class="action" data-aos="flip-up" data-aos-duration="1000">
+                        <a href="#" class="btn-1">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Commercial Package -->
+                <div class="pricing-card fade-in">
+                    <div class="card-header">
+                        <h3 class="fade-in">Commercial Branding</h3>
+                        <p>Professional photography for businesses</p>
+                    </div>
+                    <div class="price" data-aos="zoom-in" data-aos-duration="1000">
+                        <span class="amount">$499</span>
+                        <span class="period">half day</span>
+                    </div>
+                    <div class="features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 4 hours of shooting</li>
+                            <li><i class="fas fa-check"></i> Studio or on-location</li>
+                            <li><i class="fas fa-check"></i> 25+ edited images</li>
+                            <li><i class="fas fa-check"></i> Professional lighting setup</li>
+                            <li><i class="fas fa-check"></i> Full commercial usage rights</li>
+                        </ul>
+                    </div>
+                    <div class="action" data-aos="flip-up" data-aos-duration="1000">
+                        <a href="#" class="btn-1">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div id="page" class="site fade-in">
+             <div class="testimonials-container">
+                <div class="testimonials">
+                    <div class="head">
+                        <h3 class="fade-in">Testimonials</h3>
+                        <p>See What People are Saying</p>
+                    </div>
+
+                    <div class="body-1 swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0445.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">He took photos of our newborn and managed to capture every little yawn, stretch, and smile with such gentle care. We’ll treasure these first-moment memories for the rest of our lives.</p>
+                                            <div class="name">
+                                                <h4>Adesuwa Okafor</h4>
+                                                <p>Event Planner</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0441.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">I’ve worked with many photographers over the years, but none have matched his professionalism, creativity, and ability to make people feel comfortable. The final images always exceed expectations.</p>
+                                            <div class="name">
+                                                <h4>Tunde Bamidele</h4>
+                                                <p>Software Developer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0455.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">We had a last-minute photoshoot request for a corporate event, and he delivered the final edited photos within 24 hours—without sacrificing a single ounce of quality. Incredible turnaround and precision.</p>
+                                            <div class="name">
+                                                <h4>Chinyere Nwosu</h4>
+                                                <p>Medical Doctor</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0442.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">The senior portraits he did for my son were outstanding. He brought out his personality so naturally, and now we have a collection of images that genuinely reflect who he is.</p>
+                                            <div class="name">
+                                                <h4>Aminu Bello</h4>
+                                                <p>Banker</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/WhatsApp Image 2025-06-11 at 07.05.17_6d99bd0b.jpg" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">From the very first consultation to the final photo delivery, everything was seamless. He was attentive, passionate, and always went the extra mile to make sure we were thrilled with the results.</p>
+                                            <div class="name">
+                                                <h4>Kemi Alabi</h4>
+                                                <p>Interior Designer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0448.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">We hired this photographer for our engagement shoot, and I honestly couldn’t believe how beautifully the photos turned out. He captured every emotion—laughter, nervousness, love—in a way that felt truly magical.</p>
+                                            <div class="name">
+                                                <h4>Ebuka Eze</h4>
+                                                <p>Bank Manager</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0446.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">I needed professional headshots for my portfolio, and not only did he deliver exceptional quality photos, but he also made me feel so at ease during the session. It felt more like fun than work.</p>
+                                            <div class="name">
+                                                <h4>Ngozi Umeh</h4>
+                                                <p>School Principal</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0447.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">Our wedding day was chaotic, emotional, and fast-paced—but this photographer managed to freeze every perfect moment in time. The photos are cinematic, raw, and so full of love. We’re endlessly grateful.</p>
+                                            <div class="name">
+                                                <h4>Aisha Abdullahi</h4>
+                                                <p>Fashion Stylist</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0451.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">As a small business owner, branding is everything. He came in with ideas, lighting setups, and a keen eye for detail. The product and team photos have elevated our website tenfold.</p>
+                                            <div class="name">
+                                                <h4> Bolanle Adegoke</h4>
+                                                <p>Singer/Songwriter</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0450.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">I’m not usually comfortable in front of a camera, but during our maternity shoot, he created such a warm and easygoing environment. The photos are intimate, joyful, and truly timeless.</p>
+                                            <div class="name">
+                                                <h4>Gift Suleiman</h4>
+                                                <p>Travel Agent</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0452.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">We surprised our parents with a family photo session, and the results brought everyone to tears. He has a way of capturing real moments that feel completely unposed yet perfectly framed.</p>
+                                            <div class="name">
+                                                <h4>Ogechi Duru</h4>
+                                                <p>Marketing Consultant</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0459.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">The graduation photos he took of my daughter left us speechless. Every image had such depth and clarity. He even stayed longer than planned just to get the perfect golden-hour shots.</p>
+                                            <div class="name">
+                                                <h4>Dayo Ogunleye</h4>
+                                                <p>Civil Engineer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0457.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">I hired him for an editorial-style shoot and was amazed by how well he translated our creative vision into reality. He’s not just a photographer—he’s an artist with incredible storytelling skills.</p>
+                                            <div class="name">
+                                                <h4>Chuka Nwachukwu</h4>
+                                                <p>Legal Advisor</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/IMG_0453.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">He photographed our music gig, and the photos somehow captured the energy of the crowd, the atmosphere, and every intense moment on stage. It was like reliving the night all over again.</p>
+                                            <div class="name">
+                                                <h4>Hadiza Lawal</h4>
+                                                <p>Retired Nurse</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="profile-pics/IMG_0454.JPG" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">We booked a travel session during our anniversary trip, and he scouted the most stunning hidden spots. Each photo looks like a magazine cover—natural, vibrant, and full of emotion.</p>
+                                            <div class="name">
+                                                <h4>Rose Igwe</h4>
+                                                <p>University Lecturer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="wrapper">
+                                        <div class="thumbnails">
+                                            <img src="./profile-pics/WhatsApp Image 2025-06-11 at 07.05.17_b5ca28b6.jpg" alt="profile-pics" class="profile-pics">
+                                        </div>
+                                        <div class="aside">
+                                            <p class="statement">We wanted to document our grandparents’ 50th wedding anniversary, and he captured the legacy, warmth, and decades of love in a way that no one else could have. Absolutely unforgettable work.</p>
+                                            <div class="name">
+                                                <h4>Onyeike Blessing</h4>
+                                                <p>Consultant</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-section">
+            <div class="container-2">
+                <div class="contact-form fade-in">
+                    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">Get In Touch</h2>
+                    <form action="https://formsubmit.co/shilohegbuji874@gmail.com" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control"name="email"  placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" name="_subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" data-aos="flip-up" data-aos-duration="1000">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info fade-in">
+                    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">Contact Info</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+1 (123) 456-7890</p>
+                            <p>+1 (987) 654-3210</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>contact@example.com</p>
+                            <p>support@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Working Hours</h3>
+                            <p>Monday-Friday: 9AM - 5PM</p>
+                            <p>Saturday: 10AM - 2PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links" data-aos="flip-in" data-aos-duration="1000">
+                        <h3 class="social-title">Connect With Us</h3>
+                        <div class="social-icons">
+                            <ul class="wrapper-1">
+                                <li class="icon-1 facebook">
+                                    <span class="tooltip">Facebook</span>
+                                    <svg
+                                    viewBox="0 0 320 512"
+                                    height="1.2em"
+                                    fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                                    ></path>
+                                    </svg>
+                                </li>
+                                <li class="icon-1 twitter">
+                                    <span class="tooltip">Twitter</span>
+                                    <svg
+                                    height="1.8em"
+                                    fill="currentColor"
+                                    viewBox="0 0 48 48"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="twitter"
+                                    >
+                                    <path
+                                        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+                                    ></path>
+                                    </svg>
+                                </li>
+                                <li class="icon-1 instagram">
+                                    <span class="tooltip">Instagram</span>
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="1.2em"
+                                    fill="currentColor"
+                                    class="bi bi-instagram"
+                                    viewBox="0 0 16 16"
+                                    >
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                                    ></path>
+                                    </svg>
+                                </li>
+                            </ul>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-3 fade-in">
+                <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">Locate Me</h2>
+                <div class="map-container">
+                    <!-- Embedded Google Map -->
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.5062196542967!2d7.486416573821993!3d5.5212899889767435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1042dcd3f5a634c1%3A0xe5e077bbaaab274f!2sOkpara%20Ave%2C%20Umuahia%20440236%2C%20Abia!5e1!3m2!1sen!2sng!4v1749622217378!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="back-to-top">
+        <div id="back-to-top-1">
+            <P>Back to Top</P>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-left">
+        <ul class="nav-links-5">
+                <div class="logo-3">◐</div>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li style="margin-bottom: 0;"><a href="#">Contact Us</a></li>
+        </ul>
+
+        <div class="cta">
+                <p class="subtext">Ready to build something with us?</p>
+                <h2 class="lets-chat"><a>Let's Chat</a><span class="arrow">→</span></h2>
+        </div>
+
+        <ul class="social-links-5">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li style="margin-bottom: 0;"><a href="#">X</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-center">
+        <h1 class="brand fade-in">MEDBINICE<span class="copyright">©</span></h1>
+        </div>
+    </footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="lazyloading.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  document.getElementById('back-to-top-1').addEventListener('click', () => {
+    // Calculate start, destination, and duration
+    const start = window.scrollY;
+    const duration = 5000;
+    const startTime = performance.now();
+
+    function scrollStep(now) {
+      // Calculate progress (between 0 and 1)
+      const progress = Math.min((now - startTime) / duration, 1);
+      // Apply ease (easeOutCubic)
+      const ease = 1 - Math.pow(1 - progress, 3);
+      // Calculate current scroll position
+      window.scrollTo(0, start * (1 - ease));
+
+      if (progress < 1) {
+        requestAnimationFrame(scrollStep);
+      }
+    }
+
+    requestAnimationFrame(scrollStep);
+  });
+</script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoHeight: true,
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    const splitTypes = document.querySelectorAll('.reveal-type')
+
+    splitTypes.forEach((char, i) => {
+        const text = new SplitType(char, { types: 'chars' })
+        
+        gsap.from(text.chars, {
+            scrollTrigger: {
+                trigger: char,
+                start: 'top 80%',
+                end: 'top 20%',
+                scrub: true,
+                markers: false
+            },
+            opacity: 0.2,
+            stagger: 0.2
+        })
+    })
+
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+        console.log(e)
+    })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+    })
+</script>
+</body>
+</html>
