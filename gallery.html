@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Photography Gallery</title>
+<title>{{PLACEHOLDER_GALLERY_PAGE_TITLE}}</title>
 <link rel="stylesheet" href="css/combined.min.css">
 <link rel="stylesheet" href="css/gallery.css">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
@@ -21,31 +21,31 @@
 <body>
     <nav class="mobile-nav">
         <div class="logo">
-            <p>MEDBINICE</p>
+            <p>{{PLACEHOLDER_MOBILE_NAV_LOGO_TEXT}}</p>
         </div>
 
         <div class="mobile-container">
             <div class="contact-social-container">
                 <div class="nav-contact">
                     <div class="no-email">
-                        <p class="contact-number"  style="width: 5.8rem">514-903-4455</p>
-                        <a href="mailto:shilohegbuji874@gmail.com" class="contact-email" style="width: 4rem;">Email Us</a>
+                        <p class="contact-number"  style="width: 5.8rem">{{PLACEHOLDER_MOBILE_NAV_CONTACT_NUMBER}}</p>
+                        <a href="mailto:{{PLACEHOLDER_MOBILE_NAV_CONTACT_EMAIL}}" class="contact-email" style="width: 4rem;">Email Us</a>
                     </div>
                 </div>
             
                 <div class="social-links-2">
-                    <a href="">LinkedIn</a>
-                    <a href="">Instagram</a>
-                    <a href="">Facebook</a>
+                    <a href="{{PLACEHOLDER_MOBILE_NAV_LINKEDIN_URL}}">LinkedIn</a>
+                    <a href="{{PLACEHOLDER_MOBILE_NAV_INSTAGRAM_URL}}">Instagram</a>
+                    <a href="{{PLACEHOLDER_MOBILE_NAV_FACEBOOK_URL}}">Facebook</a>
                 </div>
             </div>
            
            <div class="nav-links-container">
                 <ul class="nav-list">
-                    <li><a onclick="location.href=`https://medbinice.netlify.app/index.html`">Home</a></li>
-                    <li><a onclick="location.href=`https://medbinice.netlify.app/gallery.html`">Gallery</a></li>
-                    <li><a onclick="location.href=`https://medbinice.netlify.app/#about`">About Us</a></li>
-                    <li><a onclick="location.href=`https://medbinice.netlify.app/#contact`">Contact Us</a></li>
+                    <li><a onclick="location.href=`{{PLACEHOLDER_MOBILE_NAV_HOME_URL}}`">Home</a></li>
+                    <li><a onclick="location.href=`{{PLACEHOLDER_MOBILE_NAV_GALLERY_URL}}`">Gallery</a></li>
+                    <li><a onclick="location.href=`{{PLACEHOLDER_MOBILE_NAV_ABOUT_US_URL}}`">About Us</a></li>
+                    <li><a onclick="location.href=`{{PLACEHOLDER_MOBILE_NAV_CONTACT_US_URL}}`">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -63,15 +63,15 @@
     </label>
 
     <div class="logo-1">
-        <p>MEDBINICE</p>
+        <p>{{PLACEHOLDER_MAIN_LOGO_TEXT}}</p>
     </div>
 
     <nav>
         <ul class="nav-links">
-            <li><a href="#" class="active" data-category="wedding">Wedding</a></li>
-            <li><a href="#" data-category="event">Event</a></li>
-            <li><a href="#" data-category="indoor">Indoor</a></li>
-            <li><a href="#" data-category="outdoor">Outdoor</a></li>
+            <li><a href="#" class="active" data-category="{{PLACEHOLDER_CATEGORY_1_DATA}}">{{PLACEHOLDER_CATEGORY_1_TEXT}}</a></li>
+            <li><a href="#" data-category="{{PLACEHOLDER_CATEGORY_2_DATA}}">{{PLACEHOLDER_CATEGORY_2_TEXT}}</a></li>
+            <li><a href="#" data-category="{{PLACEHOLDER_CATEGORY_3_DATA}}">{{PLACEHOLDER_CATEGORY_3_TEXT}}</a></li>
+            <li><a href="#" data-category="{{PLACEHOLDER_CATEGORY_4_DATA}}">{{PLACEHOLDER_CATEGORY_4_TEXT}}</a></li>
         </ul>
     </nav>
 
@@ -83,10 +83,10 @@
     </section>
 
     <div id="lightbox">
-        <img src="" alt="Expanded view" id="lightbox-img">
+        <img src="{{PLACEHOLDER_LIGHTBOX_IMG_SRC}}" alt="{{PLACEHOLDER_LIGHTBOX_IMG_ALT}}" id="lightbox-img">
         <button id="close-lightbox">&times;</button>
         <div class="buttons">
-            <a href="#" id="download-btn" download>Download</a>
+            <a href="{{PLACEHOLDER_DOWNLOAD_BUTTON_HREF}}" id="download-btn" download>Download</a>
         </div>
     </div>
 
@@ -94,56 +94,56 @@
         <div class="contact-section">
             <div class="container-2">
                 <div class="contact-form fade-in">
-                    <form id="contact-Form" action="https://formsubmit.co/shilohegbuji874@gmail.com" method="POST">
-                        <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">Get In Touch</h2>
+                    <form id="contact-Form" action="{{PLACEHOLDER_FORM_ACTION}}" method="POST">
+                        <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">{{PLACEHOLDER_CONTACT_FORM_TITLE}}</h2>
 
                         <!-- Add your form fields here -->
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" name="name" placeholder="John Doe" required>
+                            <label for="name">{{PLACEHOLDER_FORM_NAME_LABEL}}</label>
+                            <input type="text" id="name" class="form-control" name="name" placeholder="{{PLACEHOLDER_FORM_NAME_PLACEHOLDER}}" required>
                             <i class="fas fa-user input-icon"></i>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" name="email" placeholder="john@example.com" required>
+                            <label for="email">{{PLACEHOLDER_FORM_EMAIL_LABEL}}</label>
+                            <input type="email" id="email" class="form-control" name="email" placeholder="{{PLACEHOLDER_FORM_EMAIL_PLACEHOLDER}}" required>
                             <i class="fas fa-envelope input-icon"></i>
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" name="_subject" placeholder="How can we help?" required>
+                            <label for="subject">{{PLACEHOLDER_FORM_SUBJECT_LABEL}}</label>
+                            <input type="text" id="subject" class="form-control" name="_subject" placeholder="{{PLACEHOLDER_FORM_SUBJECT_PLACEHOLDER}}" required>
                             <i class="fas fa-tag input-icon"></i>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" name="message" placeholder="Type your message here..." required></textarea>
+                            <label for="message">{{PLACEHOLDER_FORM_MESSAGE_LABEL}}</label>
+                            <textarea id="message" class="form-control" name="message" placeholder="{{PLACEHOLDER_FORM_MESSAGE_PLACEHOLDER}}" required></textarea>
                             <i class="fas fa-comment input-icon" style="top: 40px;"></i>
                         </div>
                         
                         <!-- FormSubmit Settings -->
-                        <input type="hidden" name="_captcha" value="true">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://medbinice.netlify.app/thanks.html">
-                        <input type="hidden" name="_autoresponse" value="Thank you for your message! We'll get back to you soon.">
+                        <input type="hidden" name="_captcha" value="{{PLACEHOLDER_FORM_CAPTCHA_VALUE}}">
+                        <input type="hidden" name="_template" value="{{PLACEHOLDER_FORM_TEMPLATE_VALUE}}">
+                        <input type="hidden" name="_next" value="{{PLACEHOLDER_FORM_NEXT_VALUE}}">
+                        <input type="hidden" name="_autoresponse" value="{{PLACEHOLDER_FORM_AUTORESPONSE_VALUE}}">
                         
-                        <button type="submit" class="btn" data-aos="flip-in" data-aos-duration="1000">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <button type="submit" class="btn" data-aos="flip-in" data-aos-duration="1000">{{PLACEHOLDER_FORM_BUTTON_TEXT}} <i class="fas fa-paper-plane"></i></button>
                         <div id="formMessage" class="form-message"></div>
                     </form>
                 </div>
                 
                 <div class="contact-info fade-in">
-                    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">Contact Info</h2>
+                    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">{{PLACEHOLDER_CONTACT_INFO_TITLE}}</h2>
                     
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="contact-text">
-                            <h3>Phone</h3>
-                            <p>+1 (123) 456-7890</p>
-                            <p>+1 (987) 654-3210</p>
+                            <h3>{{PLACEHOLDER_PHONE_TITLE}}</h3>
+                            <p>{{PLACEHOLDER_PHONE_NUMBER_1}}</p>
+                            <p>{{PLACEHOLDER_PHONE_NUMBER_2}}</p>
                         </div>
                     </div>
                     
@@ -152,9 +152,9 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>contact@example.com</p>
-                            <p>support@example.com</p>
+                            <h3>{{PLACEHOLDER_EMAIL_TITLE}}</h3>
+                            <p>{{PLACEHOLDER_EMAIL_ADDRESS_1}}</p>
+                            <p>{{PLACEHOLDER_EMAIL_ADDRESS_2}}</p>
                         </div>
                     </div>
                     
@@ -163,14 +163,14 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <div class="contact-text">
-                            <h3>Working Hours</h3>
-                            <p>Monday-Friday: 9AM - 5PM</p>
-                            <p>Saturday: 10AM - 2PM</p>
+                            <h3>{{PLACEHOLDER_WORKING_HOURS_TITLE}}</h3>
+                            <p>{{PLACEHOLDER_WORKING_HOURS_WEEKDAYS}}</p>
+                            <p>{{PLACEHOLDER_WORKING_HOURS_SATURDAY}}</p>
                         </div>
                     </div>
                     
                     <div class="social-links">
-                        <h3 class="social-title" data-aos="flip-in" data-aos-duration="1000">Connect With Us</h3>
+                        <h3 class="social-title" data-aos="flip-in" data-aos-duration="1000">{{PLACEHOLDER_CONNECT_WITH_US_TITLE}}</h3>
                         <div class="social-icons">
                             <ul class="wrapper-1" data-aos="zoom-in" data-aos-duration="1200">
                                 <li class="icon-1 facebook">
@@ -222,10 +222,10 @@
             </div>
             
             <div class="container-3 fade-in">
-                <h2 class="section-title">Locate Me</h2>
+                <h2 class="section-title">{{PLACEHOLDER_LOCATE_ME_TITLE}}</h2>
                 <div class="map-container" data-aos="zoom-in" data-aos-duration="1000">
                     <!-- Embedded Google Map -->
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.5062196542967!2d7.486416573821993!3d5.5212899889767435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1042dcd3f5a634c1%3A0xe5e077bbaaab274f!2sOkpara%20Ave%2C%20Umuahia%20440236%2C%20Abia!5e1!3m2!1sen!2sng!4v1749622217378!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="map" src="{{PLACEHOLDER_GOOGLE_MAP_SRC}}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -233,34 +233,34 @@
 
     <section id="back-to-top">
         <div id="back-to-top-1">
-            <P>Back to Top</P>
+            <P>{{PLACEHOLDER_BACK_TO_TOP_TEXT}}</P>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-left">
             <ul class="nav-links-5">
-                    <div class="logo-3">◐</div>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li style="margin-bottom: 0;"><a href="#">Contact Us</a></li>
+                    <div class="logo-3">{{PLACEHOLDER_FOOTER_LOGO}}</div>
+                    <li><a href="{{PLACEHOLDER_FOOTER_HOME_LINK}}">HOME</a></li>
+                    <li><a href="{{PLACEHOLDER_FOOTER_GALLERY_LINK}}">GALLERY</a></li>
+                    <li><a href="{{PLACEHOLDER_FOOTER_ABOUT_US_LINK}}">ABOUT US</a></li>
+                    <li style="margin-bottom: 0;"><a href="{{PLACEHOLDER_FOOTER_CONTACT_US_LINK}}">Contact Us</a></li>
             </ul>
 
             <div class="cta">
-                    <p class="subtext">Ready to build something with us?</p>
-                    <h2 class="lets-chat"><a>Let's Chat</a><span class="arrow">→</span></h2>
+                    <p class="subtext">{{PLACEHOLDER_FOOTER_CTA_SUBTEXT}}</p>
+                    <h2 class="lets-chat"><a>{{PLACEHOLDER_FOOTER_CTA_TEXT}}</a><span class="arrow">→</span></h2>
             </div>
 
             <ul class="social-links-5">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li style="margin-bottom: 0;"><a href="#">X</a></li>
+                <li><a href="{{PLACEHOLDER_FOOTER_FACEBOOK_LINK}}">Facebook</a></li>
+                <li><a href="{{PLACEHOLDER_FOOTER_INSTAGRAM_LINK}}">Instagram</a></li>
+                <li style="margin-bottom: 0;"><a href="{{PLACEHOLDER_FOOTER_X_LINK}}">X</a></li>
             </ul>
         </div>
 
         <div class="footer-center">
-            <h1 class="brand">MEDBINICE<span class="copyright">©</span></h1>
+            <h1 class="brand">{{PLACEHOLDER_FOOTER_BRAND_NAME}}<span class="copyright">©</span></h1>
         </div>
     </footer>
 

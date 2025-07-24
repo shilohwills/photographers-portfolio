@@ -13,7 +13,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             const formData = new FormData(form);
             
             // Send form data using FormSubmit
-            fetch(form.action, {
+            fetch("{{PLACEHOLDER_FORM_SUBMIT_URL}}", {
                 method: 'POST',
                 body: formData,
                 headers: {

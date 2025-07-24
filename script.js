@@ -128,7 +128,7 @@ function setupFadeAnimations() {
                 
                 // Start counter animation when the project counter comes into view
                 if (entry.target.id === 'project-counter') {
-                    animateCounter(entry.target, 0, 850, 2000);
+                    animateCounter(entry.target, 0, {{PLACEHOLDER_PROJECT_COUNTER_END_VALUE}}, 2000);
                 }
                 
                 observer.unobserve(entry.target);

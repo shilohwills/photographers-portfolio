@@ -22,8 +22,8 @@ function loadGallery(category) {
     imgWrapper.setAttribute('data-aos-delay', `${(i % 6) * 100}`);
 
     const img = document.createElement('img');
-    img.src = `images/${category}/${i}.webp`;
-    img.alt = `${category} ${i}`;``
+    img.src = `{{PLACEHOLDER_IMAGE_BASE_PATH}}/${category}/${i}.webp`;
+    img.alt = `{{PLACEHOLDER_IMAGE_ALT_PREFIX}} ${category} ${i}`;``
     img.loading = 'lazy'; // Add lazy loading
     imgWrapper.appendChild(img);
     galleryColumns[i % 4].appendChild(imgWrapper);
@@ -60,7 +60,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Load default gallery on page load
-loadGallery('wedding');
+loadGallery('{{PLACEHOLDER_DEFAULT_GALLERY_CATEGORY}}');
 
 document.addEventListener("DOMContentLoaded", function () {
     const lightbox = document.getElementById('lightbox');
