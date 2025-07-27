@@ -101,22 +101,6 @@ document.querySelectorAll('.btn').forEach(btn => {
     });
 });
 
-//TRUST SECTION
- // Project counter animation
-function animateCounter(element, start, end, duration) {
-    let startTimestamp = null;
-    const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        const value = Math.floor(progress * (end - start) + start);
-        element.textContent = value.toLocaleString() + '+';
-        if (progress < 1) {
-            window.requestAnimationFrame(step);
-        }
-    };
-    window.requestAnimationFrame(step);
-}
-
 // Fade-in animation on scroll
 function setupFadeAnimations() {
     const fadeElements = document.querySelectorAll('.fade-in');
@@ -128,7 +112,7 @@ function setupFadeAnimations() {
                 
                 // Start counter animation when the project counter comes into view
                 if (entry.target.id === 'project-counter') {
-                    animateCounter(entry.target, 0, {{PLACEHOLDER_PROJECT_COUNTER_END_VALUE}}, 2000);
+                    animateCounter(entry.target, 0, {PLACEHOLDER_PROJECT_COUNTER_END_VALUE}, 2000);
                 }
                 
                 observer.unobserve(entry.target);

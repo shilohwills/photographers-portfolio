@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="css/gallery.css">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
     .lazy-image {
     opacity: 0;
     transition: opacity 0.6s ease-in;
@@ -18,7 +21,7 @@
     }
 </style>
 </head>
-<body>
+<body id="top">
     <nav class="mobile-nav">
         <div class="logo">
             <p>{{PLACEHOLDER_MOBILE_NAV_LOGO_TEXT}}</p>
@@ -233,7 +236,7 @@
 
     <section id="back-to-top">
         <div id="back-to-top-1">
-            <P>{{PLACEHOLDER_BACK_TO_TOP_TEXT}}</P>
+            <a href="#top">Back to Top</a>
         </div>
     </section>
 
@@ -264,10 +267,10 @@
         </div>
     </footer>
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="gallery.js"></script>
-<script src="lazyloading.js"></script>
-<script src="script.js"></script>
+<script src="js/libs/aos.js"></script>
+<script src="js/libs/gallery.js"></script>
+<script src="js/libs/lazyloading.js"></script>
+<script src="js/libs/script.js"></script>
 <script>
   AOS.init({
     once: true,

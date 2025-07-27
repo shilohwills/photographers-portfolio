@@ -1,9 +1,10 @@
 1 # Photographer's Portfolio Website Template
     2
-    3 This repository contains a responsive and interactive website template designed
-      for photographers to showcase their work. It features a clean design, image
-      galleries, contact forms, and smooth animations.
-    4
+    3 This repository contains a responsive and interactive website template designed for photographers to showcase their work. It features a clean design, image galleries, contact forms, and smooth animations.
+
+    4**Looking for the non-technical setup guide?**
+    > If you're not a developer and just want to customize the website with your own content, please follow the **[Complete Website Setup Guide (for Beginners)](REVISED-SETUP-GUIDE.md)**.
+    
     5 ## Table of Contents
     6
     7 1.  [Setup Instructions](#setup-instructions)
@@ -417,31 +418,30 @@
   <body>
       <div class="thank-you-container">
           <div class="header">
-              <h1>{{PLACEHOLDER_THANK_YOU_TITLE}}</h1> <!-- Edit this section -->
+              <h1>{{PLACEHOLDER_THANK_YOU_TITLE}}</h1>         <!-- Edit this section -->
               <p>{{PLACEHOLDER_THANK_YOU_MESSAGE}}</p> <!-- Edit this section -->
           </div>
 
           <div class="content">
-              <h2>{{PLACEHOLDER_CONTENT_TITLE}}</h2> <!-- Edit this section -->
+              <h2>{{PLACEHOLDER_CONTENT_TITLE}}</h2>   <!-- Edit this section -->
               <p class="message">
-                  {{PLACEHOLDER_CONTENT_MESSAGE}} <!-- Edit this section -->
+                  {{PLACEHOLDER_CONTENT_MESSAGE}}     <!-- Edit this section -->
               </p>
 
               <div class="actions">
-                  <a onclick="location.href={{PLACEHOLDER_HOME_PAGE_URL}}" class="btn
-  btn-home">
-                      <i class="fas fa-home"></i> {{PLACEHOLDER_HOME_BUTTON_TEXT}} <!--
-  Edit this section -->
+                  <a href="{{PLACEHOLDER_HOME_PAGE_URL}}" class="btn btn-home">
+                      <i class="fas fa-home"></i> {{PLACEHOLDER_HOME_BUTTON_TEXT}}
+<!-- Edit this section -->
                   </a>
               </div>
           </div>
 
           <div class="contact-info">
-              <h3>{{PLACEHOLDER_OTHER_WAYS_TITLE}}</h3> <!-- Edit this section -->
+              <h3>{{PLACEHOLDER_OTHER_WAYS_TITLE}}</h3>   <!-- Edit this section -->
               <div class="info-grid">
                   <div class="info-item">
-                      <h4>{{PLACEHOLDER_PHONE_SUPPORT_TITLE}}</h4> <!-- Edit this section
-  -->
+                      <h4>{{PLACEHOLDER_PHONE_SUPPORT_TITLE}}</h4>
+<!-- Edit this section -->
                       <p>{{PLACEHOLDER_PHONE_NUMBER_1}}</p> <!-- Edit this section -->
                   </div>
                   <div class="info-item">
@@ -449,15 +449,15 @@
                       <p>{{PLACEHOLDER_EMAIL_ADDRESS}}</p> <!-- Edit this section -->
                   </div>
                   <div class="info-item">
-                      <h4>{{PLACEHOLDER_VISIT_OFFICE_TITLE}}</h4> <!-- Edit this section
-  -->
+                      <h4>{{PLACEHOLDER_VISIT_OFFICE_TITLE}}</h4>
+<!-- Edit this section -->
                       <p>{{PLACEHOLDER_OFFICE_ADDRESS}}</p> <!-- Edit this section -->
                   </div>
               </div>
           </div>
 
           <div class="footer">
-              <p>{{PLACEHOLDER_FOOTER_COPYRIGHT}}</p> <!-- Edit this section -->
+              <p>{{PLACEHOLDER_FOOTER_COPYRIGHT}}</p>   <!-- Edit this section -->
           </div>
       </div>
   </body>
